@@ -17,6 +17,10 @@ const theme = {
     normal: "400",
     bold: "700",
   },
+  paddingBottom: {
+    subheading: 16,
+    subheadingSecondary: 12,
+  },
 };
 
 export default theme;

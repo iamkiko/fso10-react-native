@@ -25,9 +25,22 @@ const styles = StyleSheet.create({
   fontWeightBold: {
     fontWeight: theme.fontWeights.bold,
   },
+  bottomSpaced: {
+    paddingBottom: theme.paddingBottom.subheading,
+  },
+  bottomSpacedSecondary: {
+    paddingBottom: theme.paddingBottom.subheadingSecondary,
+  },
 });
 
-const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
+const Text = ({
+  color,
+  fontSize,
+  fontWeight,
+  paddingBottom,
+  style,
+  ...props
+}) => {
   const textStyle = [
     styles.text,
     color === "textSecondary" && styles.colorTextSecondary,
@@ -35,6 +48,8 @@ const Text = ({ color, fontSize, fontWeight, style, ...props }) => {
     color === "appBarText" && styles.appBarTextColor,
     fontSize === "subheading" && styles.fontSizeSubheading,
     fontWeight === "bold" && styles.fontWeightBold,
+    paddingBottom === "bottomSpaced" && styles.bottomSpaced,
+    paddingBottom === "bottomSpacedSecondary" && styles.bottomSpacedSecondary,
     style,
   ];
 
